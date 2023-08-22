@@ -1,0 +1,130 @@
+/* ---------------------------- */
+
+/* header 3 */
+
+.header-3 {
+  background-color: #212121;
+}
+
+.header-3-content {
+  display: flex;
+  align-items: center;
+}
+
+.header-3 p {
+  color: whitesmoke;
+  margin: 35px 0;
+  font-size: 2rem;
+  font-weight: bolder;
+}
+
+/* ---------------------------- */
+
+/* Section */
+
+section {
+  margin: 50px 0;
+}
+
+section .container {
+  display: flex;
+}
+
+section .left {
+  display: flex;
+}
+
+.left .product-image {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 470px;
+  width: 470px;
+  border-radius: 10px;
+}
+
+section .right {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+section .right-contents {
+  max-width: 40vw;
+  display: flex;
+  flex-direction: column;
+}
+
+.right-contents .name-and-price {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.right-contents .name-and-price h1 {
+  font-size: 1.6rem;
+  margin: 0;
+}
+.right-contents .name-and-price small {
+  margin: 12px 0;
+  font-weight: bolder;
+  font-size: 0.8rem;
+}
+
+.right-contents .quantity-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.right-contents .quantity-form {
+  margin: 15px 0;
+}
+.right-contents .quantity-details .quantity-input {
+  height: 27px;
+  width: 45px;
+  border: 1px solid black;
+  background-color: whitesmoke;
+  text-align: center;
+  border-radius: 7px;
+}
+.right-contents .quantity-details button {
+  padding: 6px 23px;
+  border: 1px solid indianred;
+  color: indianred;
+  font-weight: bolder;
+  background-color: white;
+  border-radius: 7px;
+}
+.right-contents .quantity-details button:hover {
+  cursor: pointer;
+  color: white;
+  background-color: indianred;
+}
+
+.right-contents .full-description h1 {
+  margin-bottom: 14px;
+  font-size: 1.6rem;
+}
+.right-contents .full-description h4 {
+  margin: 14px 0;
+}
+
+.right-contents .tweet {
+  margin-top: 40px;
+}
+.tweet h2 {
+  font-size: 1.3rem;
+  margin: 2px 0;
+}
+.tweet a {
+  display: block;
+  background: url("../assets3/tweet-button.png") no-repeat center / contain;
+  height: 30px;
+  width: 80px;
+  margin-top: 13px;
+  border-radius: 25%;
+}
+.tweet a:hover {
+  scale: 1.1;
+  transition: scale 0.1s ease;
+}
+
+/* ---------------------------- */

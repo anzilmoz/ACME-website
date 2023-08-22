@@ -1,0 +1,301 @@
+/* Section 1 */
+
+.section1 {
+  background: url("../assets-about/header.jpeg") no-repeat;
+  background-position: 0 67%;
+  background-size: cover;
+}
+
+.overlay {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7));
+}
+
+.section1 .container {
+  display: flex;
+  flex-direction: column;
+}
+
+.section1-contents {
+  width: 500px;
+  margin: 85px 0;
+  color: white;
+}
+
+.section1-contents h1 {
+  font-size: 3.3rem;
+  margin: 0;
+  line-height: 65px;
+}
+
+.section1-contents p {
+  margin: 25px 0;
+  line-height: 24px;
+  max-width: 400px;
+}
+
+.section1-contents button {
+  padding: 5px 20px;
+  border: 1px solid white;
+  color: white;
+  border-radius: 6px;
+  background-color: transparent;
+  margin-top: 10px;
+  font-size: 0.9rem;
+}
+
+.section1-contents button:hover {
+  background-color: whitesmoke;
+  color: #212121;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+
+/* ---------------------------- */
+
+/* Section 2 */
+
+.section-2-1 {
+  margin: 48px auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 500px;
+}
+
+.section-2-1 h2 {
+  margin: 20px 0 15px 0;
+  text-align: center;
+}
+
+.section-2-1 small {
+  font-size: 0.8rem;
+  text-align: center;
+}
+
+.section-2-2 {
+  display: flex;
+}
+
+.point-1,
+.point-2,
+.point-3,
+.point-4 {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  margin-right: 57px;
+}
+
+.point-2,
+.point-3,
+.point-4 {
+  margin-left: 15px;
+}
+
+.point-1 .r-1,
+.point-2 .r-1,
+.point-3 .r-1,
+.point-4 .r-1 {
+  height: 54px;
+  width: 48px;
+}
+
+.point-1 .r-1 {
+  background: url(../assets-about/verified.svg) no-repeat left / contain;
+}
+.point-2 .r-1 {
+  background: url(../assets-about/cart.svg) no-repeat left / contain;
+}
+.point-3 .r-1 {
+  background: url(../assets-about/transport.svg) no-repeat left / contain;
+}
+.point-4 .r-1 {
+  background: url(../assets-about/chat.svg) no-repeat left / contain;
+}
+
+.r-2 h3 {
+  margin: 10px 0 7px 0;
+}
+
+.r-3 {
+  line-height: 16px;
+}
+
+.r-3 small {
+  font-size: 0.8rem;
+  margin: 0;
+}
+
+/* ---------------------------- */
+
+/* Section 3 */
+
+.sec-3-container {
+  width: 80vw;
+  margin: 150px auto;
+  display: flex;
+  position: relative;
+  align-items: center;
+}
+
+.left {
+  display: flex;
+  width: 42%;
+  z-index: 5;
+}
+
+.left-section {
+  background: url("../assets-about/owners.jpeg") no-repeat;
+  background-position: center bottom;
+  background-size: cover;
+  border-radius: 8px;
+  height: 600px;
+  width: 100%;
+}
+
+.right {
+  position: absolute;
+  width: 75%;
+  right: 0;
+  background-color: #212121;
+  margin: 20px 0;
+  border-radius: 8px;
+  z-index: 3;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.right-contents {
+  color: whitesmoke;
+  display: flex;
+  flex-direction: column;
+  margin: 90px 0;
+  margin-right: 94px;
+  margin-left: 36%;
+}
+
+@media screen and (max-width: 1300px) {
+  .left-section {
+    height: 500px;
+  }
+
+  .right-contents {
+    margin: 30px 0;
+    margin-right: 50px;
+    margin-left: 36%;
+  }
+}
+
+.right-contents h2 {
+  margin: 0;
+  font-size: 1.7rem;
+}
+
+.right-contents p {
+  margin: 9px 0;
+  font-size: smaller;
+  line-height: 22px;
+}
+
+/* ------------------------- */
+
+/* Section 4 */
+
+.section-4 {
+  display: flex;
+  justify-content: center;
+}
+
+.john,
+.jane {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 100px;
+}
+
+.photo {
+  height: 190px;
+  width: 190px;
+  border-radius: 50%;
+}
+.john .photo {
+  background: url("../assets-about/owner1.png") no-repeat center / contain;
+}
+.jane .photo {
+  background: url("../assets-about/owner2.png") no-repeat center / contain;
+}
+.fullname h3 {
+  font-weight: bolder;
+  margin: 13px 0 10px 0;
+}
+.owner-description {
+  text-align: center;
+  line-height: 19px;
+  font-size: 0.9rem;
+}
+
+/* ---------------------------- */
+
+/* ---------------------------- */
+
+/* Section 5 */
+
+.section-5 {
+  background: url("../assets-about/support.jpeg") no-repeat center / cover;
+  margin-top: 60px;
+}
+
+.overlay {
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.1),
+    rgba(33, 33, 33, 1)
+  );
+}
+
+.sec5 {
+  display: flex;
+  flex-direction: column;
+}
+
+.section5-contents {
+  width: 470px;
+  margin-bottom: 100px;
+  margin-top: 150px;
+  color: white;
+}
+
+.section5-contents h1 {
+  font-size: 3.3rem;
+  margin: 2px 0;
+}
+
+.section5-contents p {
+  margin: 16px 0;
+  line-height: 25px;
+  max-width: 400px;
+}
+
+.section5-contents button {
+  padding: 5px 20px;
+  border: 1px solid white;
+  color: white;
+  border-radius: 6px;
+  background-color: transparent;
+  margin-top: 12px;
+  font-size: 0.9rem;
+}
+
+.section5-contents button:hover {
+  background-color: whitesmoke;
+  color: #212121;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+
+/* ---------------------------- */
