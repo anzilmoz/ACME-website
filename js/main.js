@@ -23,7 +23,7 @@ headerElement.innerHTML = `<!-- header 1 -->
     <div class="nav-field">
       <nav>
         <ul>
-          <li><a href="home.html">Home</a></li>
+          <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About</a></li>
           <li><a href="shop.html">Shop</a></li>
           <li><a href="">Donate</a></li>
