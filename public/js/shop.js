@@ -9,7 +9,7 @@ section1.style.backgroundImage = `url(${featuredProduct.imageURL})`;
 const featuredSection = section1.querySelector(".overlay-link");
 featuredSection.setAttribute(
   "href",
-  `product-description.html?productId=${featuredProduct.productId}`
+  `/product-description.html?productId=${featuredProduct.productId}`
 );
 // Update the content of the left-contents
 const leftContents = section1.querySelector(".left-contents");
@@ -94,15 +94,15 @@ function displayProductsByCategory(category) {
     itemDiv.innerHTML = `
         <a class="item-image" style="background-image: url(${
           product.imageURL
-        })" href="product-description.html?productId=${product.productId}"></a>
+        })" href="/product-description.html?productId=${product.productId}"></a>
         <p>${product.name}</p>
-        <small>$ ${product.price.toFixed(2)} USD ${
-      product.previousPrice !== null
-        ? `<del>$ ${product.previousPrice.toFixed(2)} USD</del>`
+        <small>$ ${(product.price - (product.discountPercent/100) * product.price).toFixed(2)} USD ${
+      product.discountPercent != 0
+        ? `<del>$ ${product.price.toFixed(2)} USD</del>`
         : ""
     }</small>
       
-        <a class="item-details" href="product-description.html?productId=${
+        <a class="item-details" href="/product-description.html?productId=${
           product.productId
         }">Details</a>
       `;

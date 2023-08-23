@@ -16,18 +16,18 @@ headerElement.innerHTML = `<!-- header 1 -->
 <div class="nav-header">
   <div class="container">
     <div class="site-name">
-      <a href="#">
+      <a href="/">
         <div class="acme-logo"></div>
       </a>
     </div>
     <div class="nav-field">
       <nav>
         <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="shop.html">Shop</a></li>
-          <li><a href="">Donate</a></li>
-          <li><a href="support.html">Contact</a></li>
+          <li><a href="/">Home</a></li>
+          <li><a href="/about.html">About</a></li>
+          <li><a href="/shop.html">Shop</a></li>
+          <li><a href="/donate.html">Donate</a></li>
+          <li><a href="/support.html">Contact</a></li>
         </ul>
       </nav>
     </div>
@@ -36,27 +36,26 @@ headerElement.innerHTML = `<!-- header 1 -->
       <a href="">
         <div class="cart-icon"></div>
         <div class="count-circle">
-          <span>0</span>
+          <span></span>
         </div>
       </a>
     </div>
   </div>
 </div>
 <!-- Header 2 ends -->
-
 `;
 
 footerElement.innerHTML = `<div class="container">
   <div class="site-name">
-    <a href="#">
+    <a href="/">
       <div class="acme-logo"></div>
     </a>
   </div>
   <div class="social-medias">
     <ul>
-      <li><a href="" class="twitter"></a></li>
-      <li><a href="" class="facebook"></a></li>
-      <li><a href="" class="instagram"></a></li>
+      <li><a href="https://twitter.com" class="twitter"></a></li>
+      <li><a href="https://facebook.com" class="facebook"></a></li>
+      <li><a href="https://instagram.com" class="instagram"></a></li>
     </ul>
   </div>
 </div>`;
@@ -99,7 +98,7 @@ let shopProducts = [
     productId: 0,
     name: "Gift Card",
     price: 25,
-    previousPrice: null,
+    discountPercent: 0,
     productCategory: 0,
     featured: false,
     imageURL: "assets3/gift-card.jpeg",
@@ -108,7 +107,7 @@ let shopProducts = [
     productId: 1,
     name: "White Tent",
     price: 25,
-    previousPrice: null,
+    discountPercent: 0,
     productCategory: 1,
     featured: true,
     imageURL: "assets3/featured.jpeg",
@@ -117,7 +116,7 @@ let shopProducts = [
     productId: 2,
     name: "Tin Coffee Tumbler",
     price: 35,
-    previousPrice: null,
+    discountPercent: 0,
     productCategory: 2,
     featured: false,
     imageURL: "assets3/coffee-mug.jpeg",
@@ -125,8 +124,8 @@ let shopProducts = [
   {
     productId: 3,
     name: "Blue Canvas Pack",
-    price: 95,
-    previousPrice: 145,
+    price: 160,
+    discountPercent: 25,
     productCategory: 3,
     featured: false,
     imageURL: "assets3/backpack.jpeg",
@@ -135,12 +134,13 @@ let shopProducts = [
     productId: 4,
     name: "Green Canvas Pack",
     price: 125,
-    previousPrice: null, // in case of showing discount
+    discountPercent: 0,
     productCategory: 3,
     featured: false,
     imageURL: "assets3/backpack-2.jpeg",
   },
 ];
+
 // itemId, itemQuantity are keys here of cartItems array
 if (localStorage.getItem('localCartStorage') != null) {
   cartItems = JSON.parse(localStorage.getItem('localCartStorage'));
@@ -191,7 +191,7 @@ function modalSetup() {
       })"></div>
       <div class="cart-info">
         <strong>${cartItemProduct.name}</strong>
-        <small>$ ${cartItemProduct.price.toFixed(2)} USD</small>
+        <small>$ ${(cartItemProduct.price - (cartItemProduct.discountPercent/100) * cartItemProduct.price).toFixed(2)} USD</small>
         <a href="">Remove</a>
       </div>
       <div class="cart-quantity-input">

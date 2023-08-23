@@ -149,11 +149,15 @@
   height: 30px;
   margin-top: 8px;
   margin-bottom: 13px;
+  border: 1px solid black;
+  text-indent: 8px;
 }
 .section-2 form textarea {
   height: 50px;
   margin-top: 8px;
   margin-bottom: 13px;
+  border: 1px solid black;
+  text-indent: 8px;
 }
 .section-2 form button {
   padding: 9px 0;

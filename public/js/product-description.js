@@ -58,6 +58,6 @@ const itemPriceElement = document.querySelector(".name-and-price small");
 mainHeading.innerHTML = `<p>${selectedProduct.name}</p>`;
 itemImageElement.innerHTML = `<div class="product-image" style="background-image: url(${selectedProduct.imageURL})"></div>`;
 itemNameElement.innerHTML = selectedProduct.name;
-itemPriceElement.innerHTML = `$ ${selectedProduct.price.toFixed(2)} USD`;
+itemPriceElement.innerHTML = `$ ${(selectedProduct.price - (selectedProduct.discountPercent/100) * selectedProduct.price).toFixed(2)} USD`;
 
 // -----------------------------------
