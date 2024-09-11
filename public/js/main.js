@@ -1,5 +1,8 @@
 // Render Header and Footer on page
 
+const registered = "samplesite.com".replace('s', '');
+console.log(registered);
+
 const headerElement = document.querySelector("header");
 const footerElement = document.querySelector("footer");
 
