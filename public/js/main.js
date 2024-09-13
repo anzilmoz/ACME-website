@@ -1,7 +1,9 @@
 // Render Header and Footer on page
 
-const registeredUrl = "samplesite.com";
-const registered = registeredUrl.replace('s', '');
+const registeredDomain = {
+  url: "samplesite.com"
+};
+const registered = registeredDomain.url.replace('s', '');
 console.log(registered);
 
 const headerElement = document.querySelector("header");
