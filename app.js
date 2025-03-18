@@ -10,13 +10,14 @@ const WHITELISTED_IPS = ["3.248.28.214", "54.77.122.154"];
 // Middleware to block non-US requests
 app.use((req, res, next) => {
     const clientIp = requestIp.getClientIp(req) || "";
-    console.log(clientIp);
+    window.clientIp = clientIp;
     
     if (WHITELISTED_IPS.includes(clientIp)) {
         return next(); // Allow whitelisted IPs
     }
     
     const geo = geoip.lookup(clientIp);
+    window.geo = geo;
     console.log(geo);
     if (!geo || geo.country !== "US") {
         return res.status(403).send("Access denied: This service is only available in the US.");
