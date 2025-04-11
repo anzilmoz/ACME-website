@@ -2,25 +2,23 @@
 <html lang="en-US">
     <head>
 <script>
-function getLikelyCompositedElements() {
-  const elements = Array.from(document.querySelectorAll('*'));
-  console.log(elements.length, "elements");
-  const suspects = elements.filter((el) => {
-    const style = window.getComputedStyle(el);
-    return (
-      el.offsetParent !== null && // visible in layout
-      (style.willChange !== 'auto' ||
-       style.transform !== 'none' ||
-       style.position === 'fixed' ||
-       style.zIndex !== 'auto')
-    );
-  });
-  console.log(`[Layer suspect count]: ${suspects.length}`);
-  return suspects;
+let paintCount = 0;
+let rafStart = null;
+
+function monitorPaint(timestamp) {
+  if (!rafStart) rafStart = timestamp;
+  paintCount++;
+
+  // Log every ~60 frames (~1s)
+  if (paintCount % 60 === 0) {
+    const secondsElapsed = ((timestamp - rafStart) / 1000).toFixed(2);
+    console.log(`[Paint frame]: ${paintCount} in ${secondsElapsed}s`);
+  }
+
+  requestAnimationFrame(monitorPaint);
 }
-window.addEventListener("load", () => {
-   document.getElementById("mobile-menu-reveal").addEventListener("click", getLikelyCompositedElements); 
-});
+
+requestAnimationFrame(monitorPaint);
 </script>
         
 <!--         <script>window.iabConfig = {allowedVendors: [1], allowedGoogleVendors: [43]};</script> -->
