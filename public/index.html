@@ -2,9 +2,9 @@
 <html lang="en-US">
     <head>
 <script>
-
 function getLikelyCompositedElements() {
   const elements = Array.from(document.querySelectorAll('*'));
+  console.log(elements.length, "elements");
   const suspects = elements.filter((el) => {
     const style = window.getComputedStyle(el);
     return (
@@ -15,6 +15,7 @@ function getLikelyCompositedElements() {
        style.zIndex !== 'auto')
     );
   });
+  console.log(suspects.length);
   console.log(`[Layer suspect count]: ${suspects.length}`);
   return suspects;
 }
