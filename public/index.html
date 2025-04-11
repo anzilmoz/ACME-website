@@ -1,6 +1,19 @@
 <!doctype html>
 <html lang="en-US">
     <head>
+        <script>
+            const observer = new MutationObserver((mutations) => {
+              console.log(`[WebKit repaint monitor] Affected nodes: ${mutations.length}`);
+              mutations.forEach((mutation) => {
+                console.log(mutation.target);
+              });
+            });
+            observer.observe(document.body, {
+              subtree: true,
+              attributes: true,
+              childList: true,
+            });
+        </script>
 <!--         <script>window.iabConfig = {allowedVendors: [1], allowedGoogleVendors: [43]};</script> -->
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, minimum-scale=1">
