@@ -18,7 +18,9 @@ function getLikelyCompositedElements() {
   console.log(`[Layer suspect count]: ${suspects.length}`);
   return suspects;
 }
-document.getElementById("mobile-menu-reveal").addEventListener("click", getLikelyCompositedElements);
+window.addEventListener("load", () => {
+   document.getElementById("mobile-menu-reveal").addEventListener("click", getLikelyCompositedElements); 
+});
 </script>
         
 <!--         <script>window.iabConfig = {allowedVendors: [1], allowedGoogleVendors: [43]};</script> -->
