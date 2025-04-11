@@ -2,23 +2,22 @@
 <html lang="en-US">
     <head>
 <script>
-    document.addEventListener('DOMContentLoaded', () => {
-  const observer = new MutationObserver((mutations) => {
-    console.log(`[WebKit repaint monitor] Mutation count: ${mutations.length}`);
-    mutations.forEach((mutation, i) => {
-      console.log(`Mutation #${i + 1}:`, mutation.type, mutation.target);
-    });
+function getLikelyCompositedElements() {
+  const elements = Array.from(document.querySelectorAll('*'));
+  const suspects = elements.filter((el) => {
+    const style = window.getComputedStyle(el);
+    return (
+      el.offsetParent !== null && // visible in layout
+      (style.willChange !== 'auto' ||
+       style.transform !== 'none' ||
+       style.position === 'fixed' ||
+       style.zIndex !== 'auto')
+    );
   });
-
-  // Now we safely observe the body after it's fully available
-  observer.observe(document.body, {
-    subtree: true,
-    attributes: true,
-    childList: true,
-  });
-
-  console.log('[Observer attached] Ready to track DOM changes.');
-});
+  console.log(`[Layer suspect count]: ${suspects.length}`);
+  return suspects;
+}
+document.querySelector(".hamburger-menu", getLikelyCompositedElements);
 </script>
         
 <!--         <script>window.iabConfig = {allowedVendors: [1], allowedGoogleVendors: [43]};</script> -->
