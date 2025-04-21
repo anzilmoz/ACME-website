@@ -12163,7 +12163,7 @@
       _language: {
         _store: new Map(),
         _supportedMap: {
-          en: "9DChOSyG",
+          en: "p1c0D2M5",
           ko: "3ZTup8-e",
           lt: "tjJ97Wp9",
           pt: "p971q67S",
@@ -12181,7 +12181,7 @@
         },
       },
       _banners: {
-        9: "CbkyccFo",
+        9: "71nBA5VG",
       },
       _bannerConfig: {},
       _bannerDisplayState: "none",
@@ -12696,7 +12696,7 @@
           ref.ruleSet = window.ckySettings.ruleSet;
         else {
           const response = await _ckyRequest(
-            `https://mojoview.com/client_data/dca53fe1d0d8ed251125dfb3/QFBelsaV.json`
+            `https://mojoview.com/client_data/dca53fe1d0d8ed251125dfb3/J8eNbEgC.json`
           );
           ref.ruleSet = await response.json();
         }
