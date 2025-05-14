@@ -7,14 +7,15 @@
             (function(w,d,t,r,u){var f,n,i;w[u]=w[u]||[],f=function(){var o={ti:"343168301", enableAutoSpaTracking: true};o.q=w[u],w[u]=new UET(o),w[u].push("pageLoad")},n=d.createElement(t),n.src=r,n.async=1,n.onload=n.onreadystatechange=function(){var s=this.readyState;s&&s!=="loaded"&&s!=="complete"||(f(),n.onload=n.onreadystatechange=null)},i=d.getElementsByTagName(t)[0],i.parentNode.insertBefore(n,i)})(window,document,"script","//bat.bing.com/bat.js","uetq");
         }
         document.addEventListener('cookieyes_banner_load', (eventData) => {
-            const data = eventData.detail;
-            if (data.categories.advertisement) initializeUET();
-            else document.addEventListener('cookieyes_consent_update', handleConsentUpdate);
+            // const data = eventData.detail;
+            // if (data.categories.advertisement) initializeUET();
+            // else document.addEventListener('cookieyes_consent_update', handleConsentUpdate);
+          initializeUET();
         });
-        function handleConsentUpdate(eventData) {
-            const data = eventData.detail;
-            if (data.accepted.includes("advertisement")) initializeUET();
-        }
+        // function handleConsentUpdate(eventData) {
+        //     const data = eventData.detail;
+        //     if (data.accepted.includes("advertisement")) initializeUET();
+        // }
     </script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
