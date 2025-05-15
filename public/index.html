@@ -292,7 +292,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         function _ckyPushGTMConsentData() {
   if (arguments[0] && typeof arguments[0] === "object") window.dataLayer.push(arguments[0]);else window.dataLayer.push(arguments);
 }
-        document.getElementById("purchaseButton", () => {
+        document.getElementById("purchaseButton").addEventListener("click", () => {
            _ckyPushGTMConsentData({
     event: "purchase"
   });
