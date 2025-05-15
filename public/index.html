@@ -135,6 +135,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               </div>
             </div>
 
+            <button id="purchaseButton">Purchase</button>
+
             <div class="c32">
               <small>
                 Since we've changed the way we operate to online only, and to
@@ -285,6 +287,17 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
       <!-- Footer -->
       <footer></footer>
+
+      <script>
+        function _ckyPushGTMConsentData() {
+  if (arguments[0] && typeof arguments[0] === "object") window.dataLayer.push(arguments[0]);else window.dataLayer.push(arguments);
+}
+        document.getElementById("purchaseButton", () => {
+           _ckyPushGTMConsentData({
+    event: "purchase"
+  });
+        });
+      </script>
     </div>
 
     <div class="modal"></div>
