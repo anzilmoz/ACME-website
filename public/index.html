@@ -1,24 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-<!--     <script>
+    <!--     <script>
       const lang = new URLSearchParams(window.location.search).get('lang') || "en";
       if (lang) document.documentElement.lang = lang;
     </script> -->
 
     <!-- Google Tag Manager -->
-<!--       <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    <!--       <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
       new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
       j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
       })(window,document,'script','dataLayer','GTM-KF6QGZNM');</script> -->
     <!-- End Google Tag Manager -->
-<!--     <script>(function(w,d,s,u,o){w._cyA11yConfig={"iconId":"default","position":{"mobile":"bottom-right","desktop":"bottom-right"},"language":{"default":"en","selected":[]},"modules":{"statement":{"enabled":true,"url":"https://www.cookieyes.com/accessibility"}}};var js=d.createElement(s),fjs=d.getElementsByTagName(s)[0];js.src=u;js.async=true;fjs.parentNode.insertBefore(js,fjs);})(window,document,"script","https://cdn-cookieyes.com/widgets/accessibility.js?id=7ee1e411-4352-453d-a8bd-a8a894dd6e01");</script> -->
-<!--     Start cookieyes banner -->
-<!--     <script id="cookieyes" type="text/javascript" src="https://cdn-cookieyes.com/client_data/c85e6324b8a56f5793696ecb/script.js"></script>  -->
+    <!--     <script>(function(w,d,s,u,o){w._cyA11yConfig={"iconId":"default","position":{"mobile":"bottom-right","desktop":"bottom-right"},"language":{"default":"en","selected":[]},"modules":{"statement":{"enabled":true,"url":"https://www.cookieyes.com/accessibility"}}};var js=d.createElement(s),fjs=d.getElementsByTagName(s)[0];js.src=u;js.async=true;fjs.parentNode.insertBefore(js,fjs);})(window,document,"script","https://cdn-cookieyes.com/widgets/accessibility.js?id=7ee1e411-4352-453d-a8bd-a8a894dd6e01");</script> -->
+    <!--     Start cookieyes banner -->
+    <!--     <script id="cookieyes" type="text/javascript" src="https://cdn-cookieyes.com/client_data/c85e6324b8a56f5793696ecb/script.js"></script>  -->
     <!-- End cookieyes banner -->
 
-    <!-- Start cookieyes banner --> <script id="cookieyes" type="text/javascript" src="https://cdn-cookieyes.com/client_data/33fe412c436ee5202d41efca/script.js"></script> <!-- End cookieyes banner -->
+    <!-- Start cookieyes banner -->
+    <script
+      id="cookieyes"
+      type="text/javascript"
+      src="https://cdn-cookieyes.com/client_data/33fe412c436ee5202d41efca/script.js"
+    ></script>
+    <!-- End cookieyes banner -->
 
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -32,10 +38,10 @@
       <!-- Header -->
       <header></header>
 
-<!--       <button id="purchaseButton">Purchase</button> -->
+      <!--       <button id="purchaseButton">Purchase</button> -->
 
       <!--section 1-->
-      
+
       <section class="section1">
         <div class="overlay">
           <div class="container">
@@ -72,7 +78,11 @@
         </div>
 
         <!-- Start CookieYes cookie policy -->
-          <script id="cky-cookie-policy" type="text/javascript" src="https://cdn-staging.cookieyes.com/client_data/d84bc107725f82fd2e856ea4/cookie-policy/script.js"></script>
+        <script
+          id="cky-cookie-policy"
+          type="text/javascript"
+          src="https://cdn-staging.cookieyes.com/client_data/d84bc107725f82fd2e856ea4/cookie-policy/script.js"
+        ></script>
         <!-- End CookieYes cookie policy -->
 
         <div class="container2">
@@ -286,13 +296,17 @@
 
       <script>
         function _ckyPushGTMConsentData() {
-  if (arguments[0] && typeof arguments[0] === "object") window.dataLayer.push(arguments[0]);else window.dataLayer.push(arguments);
-}
-        document.getElementById("purchaseButton").addEventListener("click", () => {
-           _ckyPushGTMConsentData({
-    event: "purchase"
-  });
-        });
+          if (arguments[0] && typeof arguments[0] === "object")
+            window.dataLayer.push(arguments[0]);
+          else window.dataLayer.push(arguments);
+        }
+        document
+          .getElementById("purchaseButton")
+          .addEventListener("click", () => {
+            _ckyPushGTMConsentData({
+              event: "purchase",
+            });
+          });
       </script>
     </div>
 

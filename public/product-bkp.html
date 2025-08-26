@@ -1,103 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <!-- Start cookieyes banner --> <script id="cookieyes" type="text/javascript" src="https://mojoview.com/client_data/cf48562de3e0c03440247847/script.js"></script> <!-- End cookieyes banner -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Product Details</title>
     <style>
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-        }
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+      }
 
-        .product-detail {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 40px;
-            margin-top: 20px;
-        }
+      .product-detail {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+        margin-top: 20px;
+      }
 
-        .product-image img {
-            max-width: 100%;
-            height: auto;
-        }
+      .product-image img {
+        max-width: 100%;
+        height: auto;
+      }
 
-        .product-info {
-            padding: 20px;
-        }
+      .product-info {
+        padding: 20px;
+      }
 
-        .back-button {
-            display: inline-block;
-            padding: 10px 20px;
-            background-color: #f5f5f5;
-            text-decoration: none;
-            color: #333;
-            border-radius: 5px;
-            margin-bottom: 20px;
-        }
+      .back-button {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #f5f5f5;
+        text-decoration: none;
+        color: #333;
+        border-radius: 5px;
+        margin-bottom: 20px;
+      }
     </style>
-</head>
+  </head>
 
-<body>
+  <body>
     <div class="container">
-        <a href="index.html" class="back-button">← Back to Products</a>
+      <a href="index.html" class="back-button">← Back to Products</a>
 
-        <div class="product-detail">
-            <div class="product-image">
-                <img src="https://via.placeholder.com/500" alt="Product Image">
-            </div>
-            <div class="product-info">
-                <h1 id="productName">Product Name</h1>
-                <p id="productPrice">$0.00</p>
-                <p id="productDescription">Loading product details...</p>
-            </div>
+      <div class="product-detail">
+        <div class="product-image">
+          <img src="https://via.placeholder.com/500" alt="Product Image" />
         </div>
+        <div class="product-info">
+          <h1 id="productName">Product Name</h1>
+          <p id="productPrice">$0.00</p>
+          <p id="productDescription">Loading product details...</p>
+        </div>
+      </div>
     </div>
 
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const urlParams = new URLSearchParams(window.location.search);
-            const productId = urlParams.get('id');
+      document.addEventListener("DOMContentLoaded", function () {
+        const urlParams = new URLSearchParams(window.location.search);
+        const productId = urlParams.get("id");
 
-            // Simulate product data (in real app, this would come from an API)
-            const products = {
-                '1': {
-                    name: 'Headphones',
-                    price: '$29.99',
-                    description: 'High-quality wireless headphones with noise cancellation.'
-                },
-                '2': {
-                    name: 'T-Shirt',
-                    price: '$19.99',
-                    description: 'Comfortable cotton t-shirt available in multiple sizes.'
-                },
-                '3': {
-                    name: 'Novel',
-                    price: '$39.99',
-                    description: 'Bestselling novel with an engaging storyline.'
-                },
-                '4': {
-                    name: 'Smart Watch',
-                    price: '$49.99',
-                    description: 'Feature-rich smartwatch with health tracking capabilities.'
-                }
-            };
+        // Simulate product data (in real app, this would come from an API)
+        const products = {
+          1: {
+            name: "Headphones",
+            price: "$29.99",
+            description:
+              "High-quality wireless headphones with noise cancellation.",
+          },
+          2: {
+            name: "T-Shirt",
+            price: "$19.99",
+            description:
+              "Comfortable cotton t-shirt available in multiple sizes.",
+          },
+          3: {
+            name: "Novel",
+            price: "$39.99",
+            description: "Bestselling novel with an engaging storyline.",
+          },
+          4: {
+            name: "Smart Watch",
+            price: "$49.99",
+            description:
+              "Feature-rich smartwatch with health tracking capabilities.",
+          },
+        };
 
-            // Update product details
-            if (productId && products[productId]) {
-                const product = products[productId];
-                document.getElementById('productName').textContent = product.name;
-                document.getElementById('productPrice').textContent = product.price;
-                document.getElementById('productDescription').textContent = product.description;
-                document.title = `${product.name} - Product Details`;
-            } else {
-                document.getElementById('productDescription').textContent = 'Product not found';
-            }
-        });
+        // Update product details
+        if (productId && products[productId]) {
+          const product = products[productId];
+          document.getElementById("productName").textContent = product.name;
+          document.getElementById("productPrice").textContent = product.price;
+          document.getElementById("productDescription").textContent =
+            product.description;
+          document.title = `${product.name} - Product Details`;
+        } else {
+          document.getElementById("productDescription").textContent =
+            "Product not found";
+        }
+      });
     </script>
-</body>
-
+  </body>
 </html>
