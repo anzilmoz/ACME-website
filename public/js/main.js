@@ -53,7 +53,7 @@ footerElement.innerHTML = `<div class="container">
   </div>
   <div class="social-medias">
     <ul>
-      <li><a href="#" class="cky-banner-element">Manage Cookies</a></li>
+      <li><a href="#" class="cky-banner-element" style="width: unset; height: unset; color: white; text-decoration: underline;">Manage Cookies</a></li>
       <li><a href="https://twitter.com" class="twitter"></a></li>
       <li><a href="https://facebook.com" class="facebook"></a></li>
       <li><a href="https://instagram.com" class="instagram"></a></li>
@@ -61,7 +61,7 @@ footerElement.innerHTML = `<div class="container">
   </div>
 </div>`;
 
-const fullOverlayElement = document.querySelector(".full-overlay")
+const fullOverlayElement = document.querySelector(".full-overlay");
 const modalElement = document.querySelector(".modal");
 modalElement.innerHTML = `<form action="" class="modal-container">
 <div class="modal-sec-1">
@@ -81,7 +81,7 @@ modalElement.innerHTML = `<form action="" class="modal-container">
     <button>Continue to Checkout</button>
   </div>
 </div>
-</form>`
+</form>`;
 
 // -----------------------------
 
@@ -143,11 +143,11 @@ let shopProducts = [
 ];
 
 // itemId, itemQuantity are keys here of cartItems array
-if (localStorage.getItem('localCartStorage') != null) {
-  cartItems = JSON.parse(localStorage.getItem('localCartStorage'));
+if (localStorage.getItem("localCartStorage") != null) {
+  cartItems = JSON.parse(localStorage.getItem("localCartStorage"));
 } else {
   cartItems = [];
-  localStorage.setItem('localCartStorage', JSON.stringify(cartItems));
+  localStorage.setItem("localCartStorage", JSON.stringify(cartItems));
 }
 
 const countCircleSpan = document.querySelector(".count-circle span");
@@ -155,10 +155,10 @@ countCircleSpan.innerHTML = cartItems.length;
 
 const cartIconElement = document.querySelector(".cart-box a");
 cartIconElement.addEventListener("click", (e) => {
-  e.preventDefault()
-  modalSetup()
+  e.preventDefault();
+  modalSetup();
   fullOverlayElement.style.display = "block";
-  modalElement.style.display = "block"
+  modalElement.style.display = "block";
 });
 const closeButton = document.querySelector(".close-icon");
 // CLOSE CART action
@@ -192,7 +192,10 @@ function modalSetup() {
       })"></div>
       <div class="cart-info">
         <strong>${cartItemProduct.name}</strong>
-        <small>$ ${(cartItemProduct.price - (cartItemProduct.discountPercent/100) * cartItemProduct.price).toFixed(2)} USD</small>
+        <small>$ ${(
+          cartItemProduct.price -
+          (cartItemProduct.discountPercent / 100) * cartItemProduct.price
+        ).toFixed(2)} USD</small>
         <a href="">Remove</a>
       </div>
       <div class="cart-quantity-input">
@@ -215,7 +218,7 @@ function modalSetup() {
       cartItems = cartItems.filter(
         (cartItem) => cartItem.itemId !== removedItem
       );
-      localStorage.setItem('localCartStorage', JSON.stringify(cartItems));
+      localStorage.setItem("localCartStorage", JSON.stringify(cartItems));
       removeElement.parentElement.parentElement.style.opacity = 0.3;
       setTimeout(() => {
         removeElement.parentElement.parentElement.remove();
@@ -232,7 +235,7 @@ function modalSetup() {
   const itemsCountInput = document.querySelectorAll(
     ".cart-quantity-input .quantity-input"
   );
-  
+
   // display at START
   displaySubtotal();
   // on COUNT CHANGE
@@ -247,7 +250,7 @@ function modalSetup() {
 
       countInput.value = countInput.value.replace(/\D/g, "");
       changingProduct.itemQuantity = parseInt(countInput.value);
-      localStorage.setItem('localCartStorage', JSON.stringify(cartItems));
+      localStorage.setItem("localCartStorage", JSON.stringify(cartItems));
       displaySubtotal();
     });
   });
