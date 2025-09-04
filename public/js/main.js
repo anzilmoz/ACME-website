@@ -53,7 +53,7 @@ footerElement.innerHTML = `<div class="container">
   </div>
   <div class="social-medias">
     <ul>
-      <li><a href="#" class="cky-banner-element" style="width: unset; height: unset; color: white; text-decoration: underline;">Manage Cookies</a></li>
+      <li><button class="cky-banner-element" style="width: unset; height: unset;">Manage Cookies</button></li>
       <li><a href="https://twitter.com" class="twitter"></a></li>
       <li><a href="https://facebook.com" class="facebook"></a></li>
       <li><a href="https://instagram.com" class="instagram"></a></li>
