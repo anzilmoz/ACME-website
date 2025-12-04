@@ -314,22 +314,6 @@
       <!-- Footer -->
       <footer></footer>
 
-      <script>
-        function _ckyPushGTMConsentData() {
-          if (arguments[0] && typeof arguments[0] === "object")
-            window.dataLayer.push(arguments[0]);
-          else window.dataLayer.push(arguments);
-        }
-        document
-          .getElementById("purchaseButton")
-          .addEventListener("click", () => {
-            _ckyPushGTMConsentData({
-              event: "purchase",
-            });
-          });
-      </script>
-    </div>
-
     <div class="modal"></div>
 
     <script src="/js/main.js"></script>
